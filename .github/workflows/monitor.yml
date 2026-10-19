@@ -1,4 +1,3 @@
-
 name: Open Circle App
 
 on:
@@ -16,12 +15,11 @@ concurrency:
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 5
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -46,3 +44,4 @@ jobs:
             git commit -m "Update Open Circle monitor cursor"
             git push
           fi
+          
