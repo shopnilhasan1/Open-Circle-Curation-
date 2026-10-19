@@ -11,7 +11,7 @@ ACCOUNT = os.getenv("STEEM_ACCOUNT", "open-circle").strip().lower()
 WEBHOOK = os.getenv("DISCORD_WEBHOOK_URL", "").strip()
 API_URL = os.getenv("STEEM_API_URL", "https://api.steemit.com").strip()
 STATE_PATH = Path("state.json")
-HISTORY_LIMIT = 1000
+HISTORY_LIMIT = 100
 TIMEOUT = 20
 
 
