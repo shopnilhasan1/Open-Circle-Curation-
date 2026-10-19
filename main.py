@@ -124,7 +124,7 @@ def main():
         print("ERROR: Add DISCORD_WEBHOOK_URL as a GitHub Actions secret.", file=sys.stderr)
         sys.exit(2)
 
-    history = rpc("condenser_api.get_account_history", [ACCOUNT, 100, HISTORY_LIMIT])
+    history = rpc("condenser_api.get_account_history", [ACCOUNT, HISTORY_LIMIT, 0])
     if not isinstance(history, list) or not history:
         raise RuntimeError("Steem API returned no account history. Check the account/API endpoint.")
 
